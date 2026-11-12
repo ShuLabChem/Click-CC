@@ -1,6 +1,6 @@
 # Click-CC
 
-![Click-CC workflow](images/Click-CC.png)
+![Uploading image.png…]()
 
 Analysis scripts for Click-CC and other related data, including bulk RNA-seq and GM-seq DNA methylation data.
 
