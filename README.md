@@ -1,8 +1,6 @@
 # Click-CC
 
-Analysis scripts for Click-CC, which jointly profiles chromatin accessibility and drug binding in single cells.
-
-This repository also includes scripts for bulk RNA-seq analysis and GM-seq DNA methylation processing.
+Analysis scripts for Click-CC and other related data, including bulk RNA-seq and GM-seq DNA methylation data.
 
 ## 1. Click-CC data analysis
 
