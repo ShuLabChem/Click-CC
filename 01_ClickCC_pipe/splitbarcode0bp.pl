@@ -4,20 +4,19 @@ use warnings;
 no strict 'refs';
 
 #use PerlIO::gzip;
-my $usage = "perl $0 IN1.gz IN2.gz IN3.gz IN4.gz ... OUT1.gz OUT2.gz...OUTx.gz
-<IN1>:fq
-<IN2>:(start pos 0-base /base number before matching with regular expression)5
-<IN3>:GGTCTT
-<IN4>:TCTGGT
-...
-<OUT1>:fq
-<OUT2>:fq
-...
-<OUTx>:fq(has no id)";
+# Usage: perl splitbarcode0bp.pl IN1.gz IN2.gz IN3.gz IN4.gz ... OUT1.gz OUT2.gz...OUTx.gz
+# <IN1>:fq
+# <IN2>:(start pos 0-base /base number before matching with regular expression)5
+# <IN3>:GGTCTT
+# <IN4>:TCTGGT
+# ...
+# <OUT1>:fq
+# <OUT2>:fq
+# ...
+# <OUTx>:fq(has no id)
 
 
 my ($n,$file,$i,$out,$j,$line1,$line2,$line3,$line4,$temp,$m,$error,$lengthb);
-die $usage unless @ARGV >=3;
 $n = @ARGV;
 $file = ($n - 3)/2;
 

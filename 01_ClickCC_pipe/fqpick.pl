@@ -2,11 +2,10 @@
 use strict;
 use warnings;
 
-my $usage = "perl $0 <IN1> <IN2> <OUT>
-<IN1> clean data1.gz, readsnumber1<readsnumber2
-<IN2> clean data2.gz
-<OUT> clean data.gz";
-die $usage unless @ARGV==3;
+# Usage: perl fqpick.pl <IN1> <IN2> <OUT>
+# <IN1> clean data1.gz, readsnumber1<readsnumber2
+# <IN2> clean data2.gz
+# <OUT> clean data.gz
 my (%hash,$b,$c,$d);
 #use PerlIO::gzip;
 open OUT,"| gzip -c > $ARGV[2]" or die $!;

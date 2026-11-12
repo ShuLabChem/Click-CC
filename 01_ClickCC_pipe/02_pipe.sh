@@ -1,4 +1,6 @@
 source activate tag2rose
+# Mouse/mm10: replace the Bowtie2 -x index below with the matching mm10 index.
+# Use matching mm10 gene annotations and coordinates in downstream analyses.
 
 mkdir raw 01_extract 02_align 03_bam 04_rmdup 05_merge 06_split 07_bigwig 
 
