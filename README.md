@@ -1,4 +1,4 @@
-1# Click-CC
+# Click-CC
 
 <img width="1143" height="723" alt="image" src="https://github.com/user-attachments/assets/eafc2364-eba0-4440-bc3a-48e14d05b68f" />
 
