@@ -1,5 +1,7 @@
 # Click-CC
 
+![Click-CC workflow](images/Click-CC.png)
+
 Analysis scripts for Click-CC and other related data, including bulk RNA-seq and GM-seq DNA methylation data.
 
 ## 1. Click-CC data analysis
@@ -25,6 +27,16 @@ Rscript 01_ClickCC_pipe/03_cell_annotation.R INPUT_DIR cells.tsv ANNOTATION.rds 
 
 Scripts in `02_RNA_seq/` cover read preprocessing, alignment, gene counting, differential expression analysis and comparison of drug versus labelled-drug responses.
 
+```bash
+bash 02_RNA_seq/03_featureCounts.sh ANNOTATION.gtf BAM_DIR
+Rscript 02_RNA_seq/04_DESeq2_example.R DRUG_NAME
+Rscript 02_RNA_seq/05_correlation_example.R DRUG_NAME
+```
+
 ## 3. DNA methylation processing
 
-`03_DNA_methylation/01_GMseq_pipeline.sh` processes GM-seq reads through quality control, trimming, alignment and methylation calling. See [FASTQ format and dependencies](03_DNA_methylation/README.md).
+`03_DNA_methylation/01_GMseq_pipeline.sh` processes GM-seq reads through quality control, trimming, alignment and methylation calling. See [FASTQ format and dependencies].
+
+```bash
+bash 03_DNA_methylation/01_GMseq_pipeline.sh INPUT_DIR REFERENCE.fa BWA_INDEX THREADS
+```
