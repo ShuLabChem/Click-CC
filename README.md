@@ -1,6 +1,6 @@
-# Click-CC
+1# Click-CC
 
-<img width="1655" height="391" alt="image" src="https://github.com/user-attachments/assets/ee357ef2-ed52-4160-a935-d6a652427e8a" />
+<img width="1143" height="723" alt="image" src="https://github.com/user-attachments/assets/eafc2364-eba0-4440-bc3a-48e14d05b68f" />
 
 Analysis scripts for Click-CC and other related data, including bulk RNA-seq and GM-seq DNA methylation data.
 
