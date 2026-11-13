@@ -22,17 +22,15 @@ bash /path/to/Click-CC/01_ClickCC_pipe/01_split.sh T7_BARCODE
 bash /path/to/Click-CC/01_ClickCC_pipe/02_pipe.sh EXPECTED_CELL_NUMBER
 ```
 
-After preparing peak files and indexed fragment files, run the R analysis from the repository root:
+After preparing peak files and indexed fragment files, run the R analysis:
 
 ```bash
 Rscript 01_ClickCC_pipe/03_cell_annotation.R INPUT_DIR cells.tsv ANNOTATION.rds OUTPUT_DIR
 ```
 
-`cells.tsv` contains `barcode`, `sample_id` and `timepoint`. See [input requirements and preprocessing details](01_ClickCC_pipe/README.md).
-
 ## 2. RNA-seq analysis
 
-Scripts in `02_RNA_seq/` cover read preprocessing, alignment, gene counting, differential expression and drug versus labelled-drug comparisons. After preprocessing and alignment, run from the repository root, with paths and sample groups configured in the R examples:
+Scripts in `02_RNA_seq/` cover read preprocessing, alignment, gene counting, differential expression and drug versus labelled-drug comparisons.
 
 ```bash
 bash 02_RNA_seq/03_featureCounts.sh ANNOTATION.gtf BAM_DIR
@@ -42,10 +40,9 @@ Rscript 02_RNA_seq/05_correlation_example.R DRUG_NAME
 
 ## 3. DNA methylation processing
 
-The GM-seq pipeline performs read preprocessing, alignment and methylation calling. Prepare paired FASTQs and a sample-prefix list (`filename.txt`) in `INPUT_DIR`, then run from the repository root:
+The GM-seq pipeline performs read preprocessing, alignment and methylation calling.
 
 ```bash
 bash 03_DNA_methylation/01_GMseq_pipeline.sh INPUT_DIR REFERENCE.fa BWA_INDEX THREADS
 ```
 
-See [FASTQ format and dependencies](03_DNA_methylation/README.md).
