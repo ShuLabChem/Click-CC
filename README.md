@@ -11,7 +11,7 @@ Analysis scripts for Click-CC and other related data, including bulk RNA-seq and
 | `01_split.sh` | Separate FASTQs by modality barcode and select matching read pairs. |
 | `splitbarcode0bp.pl` | Called by `01_split.sh`: exactly match the supplied barcode at a fixed R2 position and separate matching/unmatched reads. |
 | `fqpick.pl` | Called by `01_split.sh`: select R1 records using read identifiers from the selected R2 FASTQ. |
-| `02_pipe.sh` | Extract cell barcodes/UMIs, trim and align reads, process BAMs and split by cell barcode. |
+| `02_pipe.sh` | Extract cell barcodes, trim and align reads, process BAMs and split by cell barcode. |
 | `split.py` | Called by `02_pipe.sh`: split a BAM sorted by `CB` into one BAM per cell barcode. |
 | `03_cell_annotation.R` | Generate peak-by-cell matrices with Signac, perform QC, LSI integration, clustering and marker identification. |
 
